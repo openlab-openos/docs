@@ -13,7 +13,7 @@ This document proposes an easy to use software install and updater that can be u
 If a pre-built binary is not available for a given platform, building the installer from source is always an option:
 
 ```bash
-$ git clone https://github.com/openversenetwork/OpenOS.Prod.git
+$ git clone https://github.com/openlab-openos/OpenOS.Prod.git
 $ cd openos/install
 $ cargo run -- --help
 ```

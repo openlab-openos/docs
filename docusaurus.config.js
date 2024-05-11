@@ -37,8 +37,8 @@ module.exports = {
     navbar: {
       logo: {
         alt: "Openos Logo",
-        src: "img/logo-horizontal.svg",
-        srcDark: "img/logo-horizontal-dark.svg",
+        src: "img/logo-horizontal.png",
+        srcDark: "img/logo-horizontal-dark.png",
       },
       items: [
         {
@@ -69,7 +69,7 @@ module.exports = {
         },
        
         {
-          href: "https://github.com/openversenetwork/OpenOS.Prod",
+          href: "https://github.com/openlab-openos/OpenOS.Prod",
           // label: "GitHub",
           className: "header-link-icon header-github-link",
           "aria-label": "GitHub repository",

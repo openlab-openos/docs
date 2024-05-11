@@ -66,4 +66,4 @@ To pass messages between programs, the receiving program must accept the message
 
 ## Future Work
 
-- [Continuations and Signals for long running Transactions](https://github.com/openversenetwork/OpenOS.Prod/issues/1485)
+- [Continuations and Signals for long running Transactions](https://github.com/openlab-openos/OpenOS.Prod/issues/1485)

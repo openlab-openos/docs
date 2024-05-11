@@ -42,7 +42,7 @@ openos --version
 ### Linux
 
 Download the binaries by navigating to
-[https://github.com/openversenetwork/OpenOS.Prod/releases/latest](https://github.com/openversenetwork/OpenOS.Prod/releases/latest),
+[https://github.com/openlab-openos/OpenOS.Prod/releases/latest](https://github.com/openlab-openos/OpenOS.Prod/releases/latest),
 download **openos-release-x86_64-unknown-linux-gnu.tar.bz2**, then extract the
 archive:
 
@@ -55,7 +55,7 @@ export PATH=$PWD/bin:$PATH
 ### MacOS
 
 Download the binaries by navigating to
-[https://github.com/openversenetwork/OpenOS.Prod/releases/latest](https://github.com/openversenetwork/OpenOS.Prod/releases/latest),
+[https://github.com/openlab-openos/OpenOS.Prod/releases/latest](https://github.com/openlab-openos/OpenOS.Prod/releases/latest),
 download **openos-release-x86_64-apple-darwin.tar.bz2**, then extract the
 archive:
 
@@ -68,7 +68,7 @@ export PATH=$PWD/bin:$PATH
 ### Windows
 
 - Download the binaries by navigating to
-  [https://github.com/openversenetwork/OpenOS.Prod/releases/latest](https://github.com/openversenetwork/OpenOS.Prod/releases/latest),
+  [https://github.com/openlab-openos/OpenOS.Prod/releases/latest](https://github.com/openlab-openos/OpenOS.Prod/releases/latest),
   download **openos-release-x86_64-pc-windows-msvc.tar.bz2**, then extract the
   archive using WinZip or similar.
 
@@ -176,7 +176,7 @@ above.
 
 After installing the prerequisites, proceed with building Openos from source,
 navigate to
-[Openos's GitHub releases page](https://github.com/openversenetwork/OpenOS.Prod/releases/latest),
+[Openos's GitHub releases page](https://github.com/openlab-openos/OpenOS.Prod/releases/latest),
 and download the **Source Code** archive. Extract the code and build the
 binaries with:
 

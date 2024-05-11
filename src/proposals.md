@@ -3,7 +3,7 @@ title: System Design Proposals
 sidebar_label: Overview
 ---
 
-Changes to the Openos architecture are performed through a public proposal process (via pull requests) on the [Openos GitHub repository](https://github.com/openversenetwork/OpenOS.Prod). New proposals should be submitted with the "[Submit a Design Proposal](#submit-a-design-proposal)" guide below.
+Changes to the Openos architecture are performed through a public proposal process (via pull requests) on the [Openos GitHub repository](https://github.com/openlab-openos/OpenOS.Prod). New proposals should be submitted with the "[Submit a Design Proposal](#submit-a-design-proposal)" guide below.
 
 There are currently two different states of these design proposals:
 
@@ -30,7 +30,7 @@ To submit a new design proposal for Openos:
 2. Add any relevant Openos maintainers to the PR review.
 3. Publish the PR for community review and feedback.
 
-> **NOTE:** All people submitting PRs to the Openos repo should consult the [CONTRIBUTING](https://github.com/openversenetwork/OpenOS.Prod/blob/master/CONTRIBUTING.md) doc in the repo.
+> **NOTE:** All people submitting PRs to the Openos repo should consult the [CONTRIBUTING](https://github.com/openlab-openos/OpenOS.Prod/blob/master/CONTRIBUTING.md) doc in the repo.
 
 ### After Accepted
 
