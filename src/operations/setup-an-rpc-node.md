@@ -1,0 +1,75 @@
+---
+title: Setup a Openos RPC Node
+sidebar_label: Setup an RPC Node
+sidebar_position: 6
+---
+
+Since a Openos RPC server runs the same process as a consensus validator, first follow the instructions on [how to setup a Openos validator](./setup-a-validator.md) to get started. Note, that you do not need to create a vote account if you are operating an RPC node.  An RPC node typically does not vote.
+
+After your validator is running, you can refer to this section for the RPC node specific setup instructions.
+
+## Sample RPC Node
+
+Below is an example `validator.sh` file for a `testnet` RPC server.
+
+You will want to be aware of the following flags:
+
+- `--full-rpc-api`: enables all RPC operations on this validator.
+- `--no-voting`: runs the validator without participating in consensus. Typically, you do not want to run a validator as _both_ a consensus node and a full RPC node due to resource constraints.
+- `--private-rpc`: does not publish the validator's open RPC port in the `openos gossip` command
+
+> For more explanation on the flags used in the command, refer to the `openos-validator --help` command
+
+```
+#!/bin/bash
+exec openos-validator \
+    --identity /home/sol/validator-keypair.json \
+    --known-validator 5D1fNXzvv5NjV1ysLjirC4WY92RNsVH18vjmcszZd8on \
+    --known-validator dDzy5SR3AXdYWVqbDEkVFdvSPCtS9ihF5kJkHCtXoFs \
+    --known-validator eoKpUABi59aT4rR9HGS3LcMecfut9x7zJyodWWP43YQ \
+    --known-validator 7XSY3MrYnK8vq693Rju17bbPkCN3Z7KvvfvJx4kdrsSY \
+    --known-validator Ft5fbkqNa76vnsjYNwjDZUXoTWpP7VYm3mtsaQckQADN \
+    --known-validator 9QxCLckBiJc783jnMvXZubK4wH86Eqqvashtrwvcsgkv \
+    --only-known-rpc \
+    --full-rpc-api \
+    --no-voting \
+    --ledger /mnt/ledger \
+    --accounts /mnt/accounts \
+    --log /home/openos-rpc.log \
+    --rpc-port 8899 \
+    --rpc-bind-address 0.0.0.0 \
+    --private-rpc \
+    --dynamic-port-range 8000-8020 \
+    --entrypoint entrypoint.testnet.openverse.network/:8001 \
+    --entrypoint entrypoint2.testnet.openverse.network/:8001 \
+    --entrypoint entrypoint3.testnet.openverse.network/:8001 \
+    --expected-genesis-hash 4uhcVJyU9pJkvQyS88uRDiswHXSCkY3zQawwpjk2NsNY \
+    --wal-recovery-mode skip_any_corrupted_record \
+    --limit-ledger-size
+```
+
+### Openos Bigtable
+
+The Openos blockchain is able to create many transactions per second. Because of the volume of transactions on the chain, it is not practical for an RPC node to store the entire blockchain on the machine. Instead, RPC operators use the `--limit-ledger-size` flag to specify how many blocks to store on the RPC node. If the user of the RPC node needs historical blockchain data then the RPC server will have to access older blocks through a Openos bigtable instance.
+
+
+## Examples for other clusters
+
+Additional examples of other Openos cluster specific validator commands can be found on the [Clusters](../clusters/available.md) page.
+
+Keep in mind, you will still need to customize these commands to operate as an RPC node, as well other operator specific configuration settings.
+
+## Account indexing
+
+As the number of populated accounts on the cluster grows, account-data RPC
+requests that scan the entire account set -- like
+`getProgramAccounts` and
+SPL-token-specific requests --
+may perform poorly. If your validator needs to support any of these requests,
+you can use the `--account-index` parameter to activate one or more in-memory
+account indexes that significantly improve RPC performance by indexing accounts
+by the key field. Currently supports the following parameter values:
+
+- `program-id`: each account indexed by its owning program; used by getProgramAccounts
+- `spl-token-mint`: each SPL token account indexed by its token Mint; used by getTokenAccountsByDelegate, and getTokenLargestAccounts
+- `spl-token-owner`: each SPL token account indexed by the token-owner address; used by getTokenAccountsByOwner, and getProgramAccounts requests that include an spl-token-owner filter.
