@@ -10,6 +10,8 @@ First, setup Rust, Cargo and system packages as described in the Openos
 
 Now checkout the code from github:
 
+
+
 ### Configuration Setup
 
 Ensure important programs such as the vote program are built before any nodes are started. Note that we are using the release build here for good performance.

@@ -97,7 +97,11 @@ Post something like the following to #announcements (adjusting the text as appro
 >
 > To confirm your restarted validator is correctly waiting for the 80%:
 > a. Look for `N% of active stake visible in gossip` log messages
+<<<<<<< HEAD
 > b. Ask it over RPC what slot it's on: `openos --url https://api.devnet.openverse.network slot`. It should return `SLOT_X` until we get to 80% stake
+=======
+> b. Ask it over RPC what slot it's on: `openos --url http://127.0.0.1:8899 slot`. It should return `SLOT_X` until we get to 80% stake
+>>>>>>> f791f16382c12fe6838525c605e37586934ee6bf
 >
 > Thanks!
 

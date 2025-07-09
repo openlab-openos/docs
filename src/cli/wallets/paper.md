@@ -195,7 +195,7 @@ Next, configure the `openos` CLI tool to
 [connect to a particular cluster](../examples/choose-a-cluster.md):
 
 ```bash
-openos config set --url <CLUSTER URL> # (i.e. https://api.mainnet.https://openverse.network/)
+openos config set --url <CLUSTER URL> # (i.e. https://api.mainnet-beta.https://openverse.network/)
 ```
 
 Finally, to check the balance, run the following command:

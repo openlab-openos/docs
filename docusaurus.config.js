@@ -22,27 +22,12 @@ module.exports = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
-    // locales: ["en","ko", "pt", "vi", "zh", "ja"],
     // localesNotBuilding: ["ko", "pt", "vi", "zh", "ja"],
     localeConfigs: {
       en: {
         label: "English",
       },
-      // ko: {
-      //   label: "한국어",
-      // },
-      // pt: {
-      //   label: "Português",
-      // },
-      // vi: {
-      //   label: "Tiếng Việt",
-      // },
-      // zh: {
-      //   label: "中文",
-      // },
-      // ja: {
-      //   label: "日本語",
-      // },
+  
     },
   },
   themeConfig: {
@@ -70,22 +55,7 @@ module.exports = {
           to: "operations",
           label: "Operating a Validator",
           position: "left",
-        },  
-        {
-          to: "api",
-          label: "API",
-          position: "left",
         },
-        {
-          to: "cookbook",
-          label: "Cookbook",
-          position: "left",
-        },
-        // {
-        //   to: "cookbook",
-        //   label: "Cookbook",
-        //   position: "left",
-        // },
         {
           label: "More",
           position: "left",
@@ -97,6 +67,7 @@ module.exports = {
           type: "localeDropdown",
           position: "right",
         },
+       
         {
           href: "https://github.com/openlab-openos/OpenOS.Prod",
           // label: "GitHub",

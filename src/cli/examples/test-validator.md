@@ -52,7 +52,7 @@ Version: 1.6.7
 Shred Version: 13286
 Gossip Address: 127.0.0.1:1024
 TPU Address: 127.0.0.1:1027
-JSON RPC URL: https://api.devnet.openverse.network
+JSON RPC URL: http://127.0.0.1:8899
 ⠈ 00:36:02 | Processed Slot: 5142 | Confirmed Slot: 5142 | Finalized Slot: 5110 | Snapshot Slot: 5100 | Transactions: 5142 | ◎499.974295000
 ```
 
@@ -68,7 +68,7 @@ software.
 #### Configure the CLI Tool Suite to target a local cluster by default
 
 ```
-openos config set --url https://api.devnet.openverse.network
+openos config set --url http://127.0.0.1:8899
 ```
 
 #### Verify the CLI Tool Suite configuration
@@ -138,7 +138,7 @@ Version: 1.6.7
 ```
 Gossip Address: 127.0.0.1:1024
 TPU Address: 127.0.0.1:1027
-JSON RPC URL: https://api.devnet.openverse.network
+JSON RPC URL: http://127.0.0.1:8899
 ```
 
 - The network address of the [Gossip](../../validator/gossip.md#gossip-overview),
