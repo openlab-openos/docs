@@ -1,0 +1,62 @@
+---
+title: Openos CLI Reference and Usage
+pagination_label: Openos CLI Reference and Usage
+sidebar_label: Reference & Usage
+sidebar_position: 3
+---
+
+The openos-cli crate provides a command-line interface tool for Openos
+
+## Examples
+
+### Get Pubkey
+
+```bash
+// Command
+$ openos-keygen pubkey
+
+// Return
+<PUBKEY>
+```
+
+### Airdrop BTG/Lamports
+
+```bash
+// Command
+$ openos airdrop 1
+
+// Return
+"1 BTG"
+```
+
+### Get Balance
+
+```bash
+// Command
+$ openos balance
+
+// Return
+"3.00050001 BTG"
+```
+
+### Confirm Transaction
+
+```bash
+// Command
+$ openos confirm <TX_SIGNATURE>
+
+// Return
+"Confirmed" / "Not found" / "Transaction failed with error <ERR>"
+```
+
+### Deploy program
+
+```bash
+// Command
+$ openos program deploy <PATH>
+
+// Return
+<PROGRAM_ID>
+```
+
+## Usage
